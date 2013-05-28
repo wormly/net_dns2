@@ -329,8 +329,7 @@ class Net_DNS2
         // only auto-load our classes
         //
         if (strncmp($name, 'Net_DNS2', 8) == 0) {
-
-            include str_replace('_', '/', $name) . '.php';
+            require dirname(__FILE__)."/../".str_replace('_', '/', $name) . '.php';
         }
 
         return;
