@@ -107,12 +107,7 @@ class Net_DNS2_RR_ATMA extends Net_DNS2_RR
     {
         $value = array_shift($rdata);
 
-        if (ctype_xdigit($value) == true) {
-            
-            $this->format   = 0;
-            $this->address  = $value;
-
-        } else if (is_numeric($value) == true) {
+        if (is_numeric($value) == true) {
 
             $this->format   = 1;
             $this->address  = $value;
